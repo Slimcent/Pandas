@@ -1,16 +1,24 @@
-# This is a sample Python script.
+import pandas as pd
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#  Series, these are columns
+a = [1, 7, 2]
+mySeries = pd.Series(a)
+print(mySeries)
+
+a = [1, 7, 2]
+mySeries = pd.Series(a, index=["x", "y", "z"])  # Adding labels to a series, which then serves as the index
+print(mySeries)
+
+print(mySeries["y"])  # using label "y" to get a series value
+
+calories = {"day1": 420, "day2": 380, "day3": 390}  # Using a dictionary, the keys then serves as the index
+mySeries = pd.Series(calories)
+print(mySeries)
+
+calories = {"day1": 420, "day2": 380, "day3": 390}  # Using a dictionary, the keys then serves as the index
+mySeries = pd.Series(calories, index=["day1", "day2"])  # Displaying the keys we want to output
+print(mySeries)
+
+print()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
